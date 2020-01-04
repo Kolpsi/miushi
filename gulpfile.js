@@ -1,9 +1,10 @@
-var gulp = require('gulp');
-var plumber = require('gulp-plumber');
+var gulp = require("gulp");
+var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
 var less = require("gulp-less");
 var autoprefixer = require("autoprefixer");
-var postcss = require('gulp-postcss');
+var postcss = require("gulp-postcss");
+var csso = require('gulp-csso');
 var server = require("browser-sync").create();
 var rename = require("gulp-rename");
 
@@ -12,9 +13,6 @@ gulp.task("css", function() {
     	.pipe(plumber())
     	.pipe(sourcemap.init())
     	.pipe(less())
-    	pipe(postcss([
-      		autoprefixer()
-    	]))
     	.pipe(csso())
     	.pipe(rename("style-min.css"))
     	.pipe(sourcemap.write("."))
