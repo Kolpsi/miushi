@@ -1,23 +1,24 @@
 .user-menu {
-	list-style: none;
+  list-style: none;
   font-size: 0;
-	& a {
-		text-decoration: none;
-		color: black;
-	}
+  & a {
+    color: black;
+    text-decoration: none;
+  }
 }
 
 .user-menu__cabinet {
   position: relative;
   &:after {
     content: "";
-    width: 25px;
-    height: 25px;
     position: absolute;
     top: -40px;
     left: 200px;
-    background: url("../img/icon-user.png") no-repeat;
 
+    width: 25px;
+    height: 25px;
+
+    background: url("../img/icon-user.png") no-repeat;
   }
 }
 
@@ -25,12 +26,13 @@
   position: relative;
   &:after {
     content: "";
-    width: 25px;
-    height: 25px;
     position: absolute;
     top: -40px;
     left: 235px;
-    background: url("../img/icon-basket.png") no-repeat;
 
+    width: 25px;
+    height: 25px;
+
+    background: url("../img/icon-basket.png") no-repeat;
   }
 }
