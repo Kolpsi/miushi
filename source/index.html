@@ -10,17 +10,46 @@
 </head>
 <body>
 	<header class="page-header">
-		<nav class="main-nav">
+    <h1 class="visually-hidden">Интернет магазин доставки еды</h1>
+		<nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
 			<ul class="main-nav__list site-list">
-				<li class="site-list__item">Сеты</li>
-				<li class="site-list__item"></li>
-				<li class="site-list__item"></li>
-				<li class="site-list__item"></li>
-				<li class="site-list__item"></li>
-			</ul>	
-			<a class="page-header-logo"></a>
+				<li class="site-list__item"><a class="site-list__link" href="">меню</a></li>
+				<li class="site-list__item"><a class="site-list__link" href="">акции и скидки</a></li>
+				<li class="site-list__item"><a class="site-list__link" href="">доставка и оплата</a></li>
+				<li class="site-list__item"><a class="site-list__link" href="">новости</a></li>
+				<li class="site-list__item"><a class="site-list__link" href="">контакты</a></li>
+			</ul>
+			<a class="logo main-nav__logo"><img class="main-nav__logo-img" src="img/logo.png"></a>
+			<ul class="user-menu">
+				<li class="user-menu__item"><a class="user-menu__cabinet" href="">кабинет</a></li>
+				<li class="user-menu__item"><a class="user-menu__basket" href="">корзина</a></li>
+			</ul>
+			<div class="about-us">
+				<p class="about-us__adress">г.Курск,ул.Ленина,д.3</p>
+				<p class="about-us__email">78003332222@yandex.ru</p>
+				<p class="about-us__working-hours"></p>
+				<button class="about-us__call">обратный звонок</button>
+			</div>
 		</nav>
 	</header>
+  <main class="page-main">
+    <section class="slider page-main__slider">
+      <h2 class="visually-hidden">слайдер акций</h2>
+      <div class="slider__wrapper">
+        <div class="slider__items">
+          <div class="slider__item">
+            <h3 class="slider__title">Счастливые часы</h3>
+            <p class="slider__text">c 11:00 до 16:00 в будние дни</p>
+            <div class="slider__discount"></div>
+          </div>
+          <div class="slider__item"></div>
+          <div class="slider__item"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/main-nav.js"></script>
 </body>
 
 </html>

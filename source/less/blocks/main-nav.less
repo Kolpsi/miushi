@@ -1,0 +1,84 @@
+.main-nav {
+  width: 320px;
+}
+
+.main-nav__logo {
+  box-sizing: border-box;
+  width: 45px;
+  height: 45px;
+  margin-left: 105px;
+  &-img {
+    padding-top: 5px;
+  }
+}
+
+.main-nav__toggle {
+  position: relative;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--closed .site-list {
+    display: none;
+  }
+
+  .main-nav--nojs .site-list {
+    display: block;
+  }
+
+  .main-nav--open .main-nav__logo {
+    margin-left: 120px;
+  }
+
+  .main-nav--closed .main-nav__toggle {
+    &:after {
+      content: "";
+      position: absolute;
+      top: -30px;
+      left: 15px;
+
+      width: 20px;
+      height: 15px;
+
+      background: url("../img/burg.png") no-repeat;
+    }
+  }
+
+  .main-nav--nojs .main-nav__toggle,
+  .main-nav--open .main-nav__toggle {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 300px;
+      left: 15px;
+
+      width: 30px;
+      height: 2px;
+
+      background-color: #4ec83d;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 300px;
+      left: 15px;
+
+      width: 30px;
+      height: 2px;
+
+      background-color: #4ec83d;
+      transform: rotate(-45deg);
+    }
+  }
+}
